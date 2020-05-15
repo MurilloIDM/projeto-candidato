@@ -56,6 +56,25 @@ public class problema {
 		System.out.printf("%nPontos por escolaridade: %d%n", pontosEscolaridade);
 		System.out.printf("Pontos por experiência: %d%n", pontosExperiencia);
 		
+		//Vagas
+		if (pontosExperiencia > 0 && pontosEscolaridade > 10) {
+			System.out.println("\nVocê está habilitado para o(s) seguinte(s) cargo(s):");
+			if (pontosEscolaridade >= 20 && (carteiraMotorista == 'S' || carteiraMotorista == 's')) {
+				System.out.println("ASSISTENTE");
+			} 
+			
+			if (pontosExperiencia >= 20 && pontosEscolaridade >= 30) {
+				System.out.println("GERENTE");
+			} 
+			
+			if (pontosExperiencia == 40 && (disponibilidadeViajar == 'S' || disponibilidadeViajar == 's') && pontosEscolaridade >= 30) {
+				System.out.println("ANALISTA");
+			} 
+		} else {
+			System.out.println("\nInfelizmente seu perfil não atende a empresa");
+		}
+		
+		
 		input.close();
 
 	}
