@@ -8,7 +8,8 @@ public class problema {
 		Locale.setDefault(Locale.US);
 		Scanner input = new Scanner(System.in);
 		
-		int nivelEscolaridade;
+		int nivelEscolaridade, anosExperiencia;
+		char disponibilidadeViajar, carteiraMotorista;
 		
 		System.out.println("Qual sua escolaridade");
 		System.out.println("1) Ensino Fundamental");
@@ -18,6 +19,12 @@ public class problema {
 		System.out.print("Digite uma opção: ");
 		nivelEscolaridade = input.nextInt();
 		
+		System.out.print("\nVocê tem quantos anos de experiência profissional? ");
+		anosExperiencia = input.nextInt();
+		System.out.print("Você tem disponibilidade para viajar (S/N)? ");
+		disponibilidadeViajar = input.next().charAt(0);
+		System.out.print("Você tem habilitação de motorista (S/N)? ");
+		carteiraMotorista = input.next().charAt(0);
 		
 		input.close();
 
